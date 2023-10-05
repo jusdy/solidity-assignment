@@ -57,8 +57,8 @@ contract ProviderController is Ownable {
   mapping(uint64 => uint64[]) private providerSubscribers;
   /**
    * @dev saves subscriber id index(uppper) in providerSubscribers
-   *     if subscribers count is bigger, we need to retrieve all to get subscriber id,
-   *     but if we add this param, can get index from subscriberId and subscriberId from index
+   *     if providerSubscribers count is bigger, we need to retrieve all to get index of subscriberId,
+   *     but if we add this param, we can get index from subscriberId and also can get subscriberId from index
    *     (subscriberId => providerId => upperIndex)
    */
   mapping(uint64 => mapping(uint64 => uint256)) private subscribeUpperIndex;
